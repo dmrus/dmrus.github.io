@@ -84,6 +84,10 @@
 
 
 
+  <events name="startTourForJsEvents" onTourStart="startTourForJsEventsAction();" keep="true" />
+  <action name="startTourForJsEventsAction">
+    js(eventTourStarted());
+  </action>
 
 
 

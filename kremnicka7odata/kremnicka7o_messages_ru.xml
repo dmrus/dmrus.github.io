@@ -62,8 +62,20 @@
 
 
 
+	<data name="ru_project_floor_title"><![CDATA[Najom_Kremnicka3]]></data>
+	<data name="ru_spotmap395_tooltip"><![CDATA[chodba1]]></data>
+	<data name="ru_spotmap396_tooltip"><![CDATA[chodba2]]></data>
+	<data name="ru_spotmap397_tooltip"><![CDATA[chodba3]]></data>
+	<data name="ru_spotmap398_tooltip"><![CDATA[kancelaria1]]></data>
+	<data name="ru_spotmap399_tooltip"><![CDATA[kancelaria2]]></data>
+	<data name="ru_spotmap400_tooltip"><![CDATA[kancelaria3]]></data>
+	<data name="ru_spotmap401_tooltip"><![CDATA[kancelaria3A]]></data>
+	<data name="ru_spotmap402_tooltip"><![CDATA[kancelaria4]]></data>
+	<data name="ru_spotmap403_tooltip"><![CDATA[kancelaria5]]></data>
+	<data name="ru_spotmap404_tooltip"><![CDATA[kancelaria6]]></data>
 
 
+  <data name="ru_floorPlanmenu_label"><![CDATA[Select a floor plan]]></data>
 
 
   <data name="ru_vr_setup_hmd0"><![CDATA[SELECT YOUR HMD]]></data>

@@ -52,6 +52,14 @@
 		<![endif]-->
 
 
+		<link type="text/css" href="kremnicka7odata/lib/jquery-ui-1.11.1/jquery-ui.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="kremnicka7odata/lib/jquery-ui-1.11.1/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="kremnicka7odata/lib/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="kremnicka7odata/lib/Kolor/KolorTools.min.js"></script>
+		<script type="text/javascript" src="kremnicka7odata/graphics/KolorBootstrap.js"></script>
+
+
+
 		<style type="text/css">
 			div#panoDIV.cursorMoveMode {
 				cursor: move;
@@ -66,6 +74,22 @@
 		</style>
 
 		<script type="text/javascript">
+
+			function webglAvailable() {
+				try {
+					var canvas = document.createElement("canvas");
+					return !!window.WebGLRenderingContext && (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"));
+				} catch(e) {
+					return false;
+				}
+			}
+			function getWmodeValue() {
+				var webglTest = webglAvailable();
+				if(webglTest){
+					return 'direct';
+				}
+				return 'opaque';
+			}
 
 			function readDeviceOrientation() {
 				// window.innerHeight is not supported by IE
@@ -101,11 +125,15 @@
 
 				unloadPlayer();
 
+				eventUnloadPlugins();
+
 				setTimeout(function(){ loadPlayer(true, curScene); }, 100);
 			}
 			function accessStdVr(curScene){
 
 				unloadPlayer();
+
+				resetValuesForPlugins();
 
 				setTimeout(function(){ loadPlayer(false, curScene); }, 100);
 			}
@@ -137,6 +165,8 @@
 						,vars:{startscene:curScene}
 
 						,localfallback:"flash"
+
+						,wmode: getWmodeValue()
 
 
 					});
